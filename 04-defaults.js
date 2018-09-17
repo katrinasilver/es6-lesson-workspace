@@ -1,9 +1,10 @@
-// update to use default values
-function greet(name, greeting){
-  greeting = greeting || 'Hello'
-  return `${greeting} ${name}`
-}
+// update to use default values added to the param of the function
+// function greet(name, greeting = 'Hello'){
+//   // greeting = greeting || 'Hello';
+//   return `${greeting} ${name}`;
+// }
 
-console.log(greet('Roger'))
-console.log(greet('Roger', 'Salutations'))
+const greet = (name = 'Roger', greeting = 'Hello') => `${greeting} ${name}`;
 
+console.log(greet());
+// console.log(greet('Roger', 'Salutations'));
